@@ -1,0 +1,58 @@
+<div *ngIf="cityWeather" class="container">
+  <h1 class="sample-content">Weather</h1>
+  <hr>
+  <div>
+    <div class="item" *ngFor="let city of cityWeather.list">
+      <div style="font-size: 110%; font-weight: bold; color: darkviolet;">{{city.name}}</div>
+      <div>
+        <div style="display: block; clear: left;">
+          <div>
+            <div style="font-size:90%; font-weight: bold; color: darkorange"
+                 title="Текущая температура"> Now {{city.main.temp}}°
+            </div>
+            <div style="display: block; clear: left; font-size: small; color: deepskyblue">Today from
+              {{city.main.temp_min}}° to
+              {{city.main.temp_max}}°
+            </div>
+          </div>
+        </div>
+        <div style="display: block; clear: left; color: gray; font-size: small;">Humidity: {{city.main.humidity}}%
+        </div>
+        <div style="display: block; clear: left; color: gray; font-size: small;">Wind speed: {{city.wind.speed}}m/s
+        </div>
+        <div style="display: block; clear: left; color: gray; font-size: small;">Pressure:
+          {{city.main.pressure}}hpa
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Далее в русском переводе -->
+  <!--<hr>-->
+  <!--<h1 class="sample-content">Погода</h1>-->
+  <!--<div>-->
+    <!--<div class="item" *ngFor="let city of cityWeather.list">-->
+      <!--<div style="font-size: 110%; font-weight: bold; color: darkviolet;">{{city.name}}</div>-->
+      <!--<div>-->
+        <!--<div style="display: block; clear: left;">-->
+          <!--<div>-->
+            <!--<div style="font-size:90%; font-weight: bold; color: darkorange"-->
+                 <!--title="Текущая температура"> Сейчас {{city.main.temp}}°-->
+            <!--</div>-->
+            <!--<div style="display: block; clear: left; font-size: small; color: deepskyblue">Сегодня от-->
+              <!--{{city.main.temp_min}}° до-->
+              <!--{{city.main.temp_max}}°-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div style="display: block; clear: left; color: gray; font-size: small;">Влажность: {{city.main.humidity}}%-->
+        <!--</div>-->
+        <!--<div style="display: block; clear: left; color: gray; font-size: small;">Скорость ветра: {{city.wind.speed}}m/s-->
+        <!--</div>-->
+        <!--<div style="display: block; clear: left; color: gray; font-size: small;">Давление:-->
+          <!--{{city.main.pressure}}hpa-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+</div>
